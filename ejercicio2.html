@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .boton {
+            width: 30%;
+            height: 30%;
+            margin: 1%;
+        }
+
+        #panel {
+            display: inline-flexbox;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br>
+    <div id="panel">
+            <input type="button"  class="boton" value="">
+            <input type="button"  class="boton" value="">
+            <input type="button"  class="boton" value=""><br>
+            <input type="button"  class="boton" value="">
+            <input type="button"  class="boton" value="">
+            <input type="button"  class="boton" value=""><br>
+            <input type="button"  class="boton" value="">
+            <input type="button"  class="boton" value="">
+            <input type="button"  class="boton"  value="">
+
+    </div>
+
+    <script>
+        let datos = [1, 2, 3, 4, 5, 6, 7, 8];
+        let botones = Array.from(document.querySelectorAll(".boton"));
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function randomizar() {
+            let numeros = shuffle(datos);
+            let cont = 0, num;
+            for (i in botones) {
+                num = numeros[cont++];
+                botones[i].value = (num) ? num : " ";
+            }
+        }
+        randomizar();
+
+
+    </script>
+
+
+
+
+
+</body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+
+
+</head>
+
+<body>
+
+    <textarea id="1">
+
+    </textarea>
+
+
+
+    <textarea id="2">
+
+    </textarea>
+
+    <button id="btn" onclick="sumar()">
+        SUMA
+    </button>
+
+    <textarea id="3">
+
+    </textarea>
+
+    <script>
+
+        function sumar(){
+            var n1 = document.getElementById("1").value;
+            var n2 = document.getElementById("2").value;
+
+            var suma = parseInt(n1) + parseInt(n2);
+
+            document.getElementById("3").value = suma;
+        }
+    </script>
+
+
+
+
+
+</body>
